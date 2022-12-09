@@ -1,2 +1,2 @@
-# Yan1025.github.io
-Personal Blog
+# Yan
+Personal Blog Yan
