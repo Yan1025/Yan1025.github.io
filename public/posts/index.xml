@@ -18,5 +18,14 @@ Visit the Hugo website!
 Why????????? </description>
     </item>
     
+    <item>
+      <title>My First Post</title>
+      <link>https://yan1025.github.io/posts/test/</link>
+      <pubDate>Sat, 10 Dec 2022 18:57:11 +0800</pubDate>
+      
+      <guid>https://yan1025.github.io/posts/test/</guid>
+      <description>So, am i success?! </description>
+    </item>
+    
   </channel>
 </rss>
