@@ -1,4 +1,4 @@
-baseURL = 'https://www.google.com/'
+baseURL = 'https://yan1025.github.io/'
 languageCode = 'en-us'
 title = 'Yan的博客'
 theme = 'ananke'
