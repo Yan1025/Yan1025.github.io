@@ -1,0 +1,4 @@
+baseURL = 'https://www.google.com/'
+languageCode = 'en-us'
+title = 'Yan的博客'
+theme = 'ananke'
