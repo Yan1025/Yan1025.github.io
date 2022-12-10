@@ -1,2 +1,0 @@
-# Yan
-Personal Blog Yan
