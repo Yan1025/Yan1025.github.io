@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 11 Dec 2022 11:57:11 +0800</lastBuildDate><atom:link href="https://yan1025.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Dec 2022 21:57:11 +0800</lastBuildDate><atom:link href="https://yan1025.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build this blog?</title>
+      <link>https://yan1025.github.io/posts/howtobuildthisblog/</link>
+      <pubDate>Sun, 11 Dec 2022 21:57:11 +0800</pubDate>
+      
+      <guid>https://yan1025.github.io/posts/howtobuildthisblog/</guid>
+      <description>Tech stack GitHub Pages Hugo Notice There is a conflict on the way to use Git Actions.
+Host on GitHub on Hugo&amp;rsquo;s official website indicates that we should create branch named &amp;lsquo;gh-pages&amp;rsquo; as the source branch bearing the complied static website&amp;rsquo;s codes by &amp;lsquo;hugo&amp;rsquo; command, and create a file in .github/workflows/gh-pages.yml containing the following content :
+name: github pages on: push: branches: - main # Set a branch that will trigger a deployment pull_request: jobs: deploy: runs-on: ubuntu-22.</description>
+    </item>
+    
     <item>
       <title>吃屎还是吃牛排?</title>
       <link>https://yan1025.github.io/posts/%E5%90%83%E5%B1%8E%E8%BF%98%E6%98%AF%E5%90%83%E7%89%9B%E6%8E%92/</link>

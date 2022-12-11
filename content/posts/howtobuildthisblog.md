@@ -3,10 +3,10 @@ title: "How to build this blog?"
 date: 2022-12-11T21:57:11+08:00
 draft: false
 ---
-# Tech stack
+## Tech stack
 * [GitHub Pages](https://pages.github.com/)
 * [Hugo](https://gohugo.io/getting-started/quick-start/)
-# Notice
+## Notice
 There is a conflict on the way to use [Git Actions](https://github.com/features/actions).
 
 [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/) on Hugo's official website indicates that
@@ -47,7 +47,9 @@ jobs:
           publish_dir: ./public
 ```
 For comparision, the **Hugo Action** recommended by [GitHub](https://github.com/Yan1025/Yan1025.github.io/actions/new) 
-![Hugo Action](img.png)
+
+[//]: # (![Hugo Action]&#40;https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/img.png&#41;)
+![](https://github.com/Yan1025/picbed/blob/master/picbed/img.png?raw=true)
 does not needs creating extra branck besides 'main' branch, therefore it's more convennient than above.
 
 In addition, GitHub will automatically create a file in .github/workflows/hugo.yml containing the following content:
