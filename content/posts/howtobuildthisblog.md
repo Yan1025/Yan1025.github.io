@@ -9,7 +9,7 @@ draft: false
 ## Notice
 There is a conflict on the way to use [Git Actions](https://github.com/features/actions).
 
-[Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/) on Hugo's official website indicates that
+['Host on GitHub'](https://gohugo.io/hosting-and-deployment/hosting-on-github/) on Hugo's official website indicates that
 we should create branch named 'gh-pages' as the source branch bearing the complied static website's codes by 'hugo' 
 command, and create a file in .github/workflows/gh-pages.yml containing the following content :
 ```yaml

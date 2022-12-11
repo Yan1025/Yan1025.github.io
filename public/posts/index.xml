@@ -16,7 +16,7 @@
             
             <guid>https://yan1025.github.io/posts/howtobuildthisblog/</guid>
             <description>Tech stack GitHub Pages Hugo Notice There is a conflict on the way to use Git Actions.
-Host on GitHub on Hugo&amp;rsquo;s official website indicates that we should create branch named &amp;lsquo;gh-pages&amp;rsquo; as the source branch bearing the complied static website&amp;rsquo;s codes by &amp;lsquo;hugo&amp;rsquo; command, and create a file in .github/workflows/gh-pages.yml containing the following content :
+&amp;lsquo;Host on GitHub&amp;rsquo; on Hugo&amp;rsquo;s official website indicates that we should create branch named &amp;lsquo;gh-pages&amp;rsquo; as the source branch bearing the complied static website&amp;rsquo;s codes by &amp;lsquo;hugo&amp;rsquo; command, and create a file in .github/workflows/gh-pages.yml containing the following content :
 name: github pages on: push: branches: - main # Set a branch that will trigger a deployment pull_request: jobs: deploy: runs-on: ubuntu-22.</description>
             <content type="html"><![CDATA[<h2 id="tech-stack">Tech stack</h2>
 <ul>
@@ -25,7 +25,7 @@ name: github pages on: push: branches: - main # Set a branch that will trigger a
 </ul>
 <h2 id="notice">Notice</h2>
 <p>There is a conflict on the way to use <a href="https://github.com/features/actions">Git Actions</a>.</p>
-<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a> on Hugo&rsquo;s official website indicates that
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">&lsquo;Host on GitHub&rsquo;</a> on Hugo&rsquo;s official website indicates that
 we should create branch named &lsquo;gh-pages&rsquo; as the source branch bearing the complied static website&rsquo;s codes by &lsquo;hugo&rsquo;
 command, and create a file in .github/workflows/gh-pages.yml containing the following content :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">github pages</span>
