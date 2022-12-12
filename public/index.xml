@@ -16,7 +16,7 @@
       <guid>https://yan1025.github.io/posts/sentinel/</guid>
       <description>Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
 dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
-Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &amp;lsquo;Sla&amp;rsquo; that stored in MongoDB) what build new flowRules from the new business data and push to etcd server positively.</description>
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &amp;lsquo;Sla&amp;rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively.</description>
     </item>
     
     <item>
