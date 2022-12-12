@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 11 Dec 2022 21:57:11 +0800</lastBuildDate><atom:link href="https://yan1025.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 21:58:11 +0800</lastBuildDate><atom:link href="https://yan1025.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Business data driven dynamic flowRules in Sentinel</title>
+      <link>https://yan1025.github.io/posts/sentinel/</link>
+      <pubDate>Mon, 12 Dec 2022 21:58:11 +0800</pubDate>
+      
+      <guid>https://yan1025.github.io/posts/sentinel/</guid>
+      <description>Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
+dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &amp;lsquo;Sla&amp;rsquo; that stored in MongoDB) what build new flowRules from the new business data and push to etcd server positively.</description>
+    </item>
+    
     <item>
       <title>How to build this blog?</title>
       <link>https://yan1025.github.io/posts/howtobuildthisblog/</link>

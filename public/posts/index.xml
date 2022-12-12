@@ -6,8 +6,40 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sun, 11 Dec 2022 21:57:11 +0800</lastBuildDate>
+        <lastBuildDate>Mon, 12 Dec 2022 21:58:11 +0800</lastBuildDate>
         <atom:link href="https://yan1025.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Business data driven dynamic flowRules in Sentinel</title>
+            <link>https://yan1025.github.io/posts/sentinel/</link>
+            <pubDate>Mon, 12 Dec 2022 21:58:11 +0800</pubDate>
+            
+            <guid>https://yan1025.github.io/posts/sentinel/</guid>
+            <description>Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
+dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &amp;lsquo;Sla&amp;rsquo; that stored in MongoDB) what build new flowRules from the new business data and push to etcd server positively.</description>
+            <content type="html"><![CDATA[<h1 id="native-dynamic-datasource-supported-by-sentinel">Native dynamic datasource supported by Sentinel</h1>
+<p>In fact, Sentinel already build-in support dynamic datasource 👇</p>
+<ul>
+<li><a href="https://github.com/alibaba/Sentinel/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%99%E6%89%A9%E5%B1%95">dynamic rules</a></li>
+<li><a href="https://github.com/alibaba/Sentinel/wiki/%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Sentinel#%E8%A7%84%E5%88%99%E7%AE%A1%E7%90%86%E5%8F%8A%E6%8E%A8%E9%80%81">using in product environment-sentinel</a></li>
+</ul>
+<p>Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client,
+like the following 👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/53381986-a0b73f00-39ad-11e9-90cf-b49158ae4b6f.png" alt="">
+Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.</p>
+<h1 id="transform-the-interaction-between-systems">Transform the interaction between systems</h1>
+<p>So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following
+(i used the etcd as the dynamic datasource)👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%20(90).png" alt=""></p>
+<p>Besides the common steps between offical suggested and my practice, we should takes one more step:
+add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what build new flowRules from the
+new business data and push to etcd server positively. Sentinel-etcd-datasource will automatically does the rest things.</p>
+<h1 id="the-bug-of-sentinel">The bug of sentinel</h1>
+<p>I found a bug when i used sentinel-etcd-datasource, and i committed a pull request 👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/aaa.png" alt=""></p>
+]]></content>
+        </item>
         
         <item>
             <title>How to build this blog?</title>
