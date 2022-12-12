@@ -15,7 +15,8 @@
             <pubDate>Sun, 11 Dec 2022 21:57:11 +0800</pubDate>
             
             <guid>https://yan1025.github.io/posts/howtobuildthisblog/</guid>
-            <description>Tech stack GitHub Pages Hugo Notice There is a conflict on the way to use Git Actions.
+            <description>Tech stack GitHub Pages Hugo theme hello-friend-ng
+Notice There is a conflict on the way to use Git Actions.
 &amp;lsquo;Host on GitHub&amp;rsquo; on Hugo&amp;rsquo;s official website indicates that we should create branch named &amp;lsquo;gh-pages&amp;rsquo; as the source branch bearing the complied static website&amp;rsquo;s codes by &amp;lsquo;hugo&amp;rsquo; command, and create a file in .github/workflows/gh-pages.yml containing the following content :
 name: github pages on: push: branches: - main # Set a branch that will trigger a deployment pull_request: jobs: deploy: runs-on: ubuntu-22.</description>
             <content type="html"><![CDATA[<h2 id="tech-stack">Tech stack</h2>
@@ -23,6 +24,8 @@ name: github pages on: push: branches: - main # Set a branch that will trigger a
 <li><a href="https://pages.github.com/">GitHub Pages</a></li>
 <li><a href="https://gohugo.io/getting-started/quick-start/">Hugo</a></li>
 </ul>
+<h2 id="theme">theme</h2>
+<p><a href="https://themes.gohugo.io/themes/hugo-theme-hello-friend-ng/">hello-friend-ng</a></p>
 <h2 id="notice">Notice</h2>
 <p>There is a conflict on the way to use <a href="https://github.com/features/actions">Git Actions</a>.</p>
 <p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">&lsquo;Host on GitHub&rsquo;</a> on Hugo&rsquo;s official website indicates that

@@ -6,6 +6,8 @@ draft: false
 ## Tech stack
 * [GitHub Pages](https://pages.github.com/)
 * [Hugo](https://gohugo.io/getting-started/quick-start/)
+## theme
+[hello-friend-ng](https://themes.gohugo.io/themes/hugo-theme-hello-friend-ng/)
 ## Notice
 There is a conflict on the way to use [Git Actions](https://github.com/features/actions).
 
