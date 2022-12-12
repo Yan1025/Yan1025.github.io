@@ -50,7 +50,7 @@ jobs:
 ```
 For comparision, the **Hugo Action** recommended by [GitHub](https://github.com/Yan1025/Yan1025.github.io/actions/new) 
 
-![Hugo Action](https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/img.png?token=AGECEYFN3ZXGQPDG5SV3PNTDS3J3K)
+![Hugo Action](https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/img.png)
 does not needs creating extra branck besides 'main' branch, therefore it's more convennient than above.
 
 In addition, GitHub will automatically create a file in .github/workflows/hugo.yml containing the following content:
