@@ -22,10 +22,10 @@
     
     <item>
       <title>Business data driven dynamic flowRules in Sentinel</title>
-      <link>https://yan1025.github.io/tech/sentinel/</link>
+      <link>https://yan1025.github.io/posts/sentinel/</link>
       <pubDate>Mon, 12 Dec 2022 21:58:11 +0800</pubDate>
       
-      <guid>https://yan1025.github.io/tech/sentinel/</guid>
+      <guid>https://yan1025.github.io/posts/sentinel/</guid>
       <description>Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
 dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
 Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &amp;lsquo;Sla&amp;rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively.</description>
@@ -33,10 +33,10 @@ Transform the interaction between systems So we need transform the interaction b
     
     <item>
       <title>How to build this blog?</title>
-      <link>https://yan1025.github.io/tech/howtobuildthisblog/</link>
+      <link>https://yan1025.github.io/posts/howtobuildthisblog/</link>
       <pubDate>Sun, 11 Dec 2022 21:57:11 +0800</pubDate>
       
-      <guid>https://yan1025.github.io/tech/howtobuildthisblog/</guid>
+      <guid>https://yan1025.github.io/posts/howtobuildthisblog/</guid>
       <description>Tech stack GitHub Pages Hugo theme hello-friend-ng
 Notice There is a conflict on the way to use Git Actions.
 &amp;lsquo;Host on GitHub&amp;rsquo; on Hugo&amp;rsquo;s official website indicates that we should create branch named &amp;lsquo;gh-pages&amp;rsquo; as the source branch bearing the complied static website&amp;rsquo;s codes by &amp;lsquo;hugo&amp;rsquo; command, and create a file in .github/workflows/gh-pages.yml containing the following content :
@@ -45,10 +45,10 @@ name: github pages on: push: branches: - main # Set a branch that will trigger a
     
     <item>
       <title>吃屎还是吃牛排?</title>
-      <link>https://yan1025.github.io/tech/%E5%90%83%E5%B1%8E%E8%BF%98%E6%98%AF%E5%90%83%E7%89%9B%E6%8E%92/</link>
+      <link>https://yan1025.github.io/posts/%E5%90%83%E5%B1%8E%E8%BF%98%E6%98%AF%E5%90%83%E7%89%9B%E6%8E%92/</link>
       <pubDate>Sun, 11 Dec 2022 11:57:11 +0800</pubDate>
       
-      <guid>https://yan1025.github.io/tech/%E5%90%83%E5%B1%8E%E8%BF%98%E6%98%AF%E5%90%83%E7%89%9B%E6%8E%92/</guid>
+      <guid>https://yan1025.github.io/posts/%E5%90%83%E5%B1%8E%E8%BF%98%E6%98%AF%E5%90%83%E7%89%9B%E6%8E%92/</guid>
       <description>抛弃中文书籍 如果我今天想学习MongoDB了，我绝对不会去买一本中文书来啃，为什么呢？
 MongoDB这样优秀的技术栈，是有非常详细的官网的，而且官网的责任感和出发点和写书人是完全不一样的。
 写书人除非是MongoDB官方团队成员，否则他的第一目的并不是教会别人，而是给自己的履历上加上一条“MongoDBXXX教程作者，MongoDB中文社区推广人”，因此故弄玄虚的可能性非常大，而官网一定是最希望你能学会的，否则他怎么售卖相关服务呢？
@@ -66,10 +66,10 @@ MongoDB这样优秀的技术栈，是有非常详细的官网的，而且官网�
     
     <item>
       <title>Hi</title>
-      <link>https://yan1025.github.io/tech/hi/</link>
+      <link>https://yan1025.github.io/posts/hi/</link>
       <pubDate>Sat, 10 Dec 2022 18:58:11 +0800</pubDate>
       
-      <guid>https://yan1025.github.io/tech/hi/</guid>
+      <guid>https://yan1025.github.io/posts/hi/</guid>
       <description>My name is yan </description>
     </item>
     
