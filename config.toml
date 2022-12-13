@@ -47,13 +47,13 @@ logoHomeLink = "/"
 
 # And you can even create generic menu
 [[menu.main]]
-identifier = "blog"
-name       = "Blog"
-url        = "/posts"
-#[[menu.main]]
-#identifier = "blog2"
-#name       = "Blog2"
-#url        = "/posts2"
+identifier = "life"
+name       = "Life"
+url        = "/life"
+[[menu.main]]
+identifier = "tech"
+name       = "Tech"
+url        = "/tech"
 
 [[params.social]]
 name = "github"
