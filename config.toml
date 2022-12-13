@@ -53,7 +53,7 @@ url        = "/life"
 [[menu.main]]
 identifier = "tech"
 name       = "Tech"
-url        = "/tech"
+url        = "/posts"
 
 [[params.social]]
 name = "github"
