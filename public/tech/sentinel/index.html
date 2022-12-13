@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
+dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &amp;lsquo;Sla&amp;rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://yan1025.github.io/tech/sentinel/" />
+
+
+    <title>
+        
+            Business data driven dynamic flowRules in Sentinel :: GodYan  — Devil is in human&#39;s heart
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.4e5c639214707eff609bb55fe49e183dee42258a73bc90e4cc7b0a84f900798a.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Business data driven dynamic flowRules in Sentinel">
+<meta itemprop="description" content="Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
+dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively."><meta itemprop="datePublished" content="2022-12-12T21:58:11+08:00" />
+<meta itemprop="dateModified" content="2022-12-12T21:58:11+08:00" />
+<meta itemprop="wordCount" content="157"><meta itemprop="image" content="https://yan1025.github.io/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://yan1025.github.io/"/>
+
+<meta name="twitter:title" content="Business data driven dynamic flowRules in Sentinel"/>
+<meta name="twitter:description" content="Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
+dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively."/>
+
+
+
+    <meta property="og:title" content="Business data driven dynamic flowRules in Sentinel" />
+<meta property="og:description" content="Native dynamic datasource supported by Sentinel In fact, Sentinel already build-in support dynamic datasource 👇
+dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
+Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yan1025.github.io/tech/sentinel/" /><meta property="og:image" content="https://yan1025.github.io/"/><meta property="article:section" content="tech" />
+<meta property="article:published_time" content="2022-12-12T21:58:11+08:00" />
+<meta property="article:modified_time" content="2022-12-12T21:58:11+08:00" /><meta property="og:site_name" content="GodYan" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-12-12 21:58:11 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ are you happy</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/life">Life</a></li><li><a href="/tech">Tech</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://yan1025.github.io/tech/sentinel/">Business data driven dynamic flowRules in Sentinel</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <h2 id="native-dynamic-datasource-supported-by-sentinel">Native dynamic datasource supported by Sentinel</h2>
+<p>In fact, Sentinel already build-in support dynamic datasource 👇</p>
+<ul>
+<li><a href="https://github.com/alibaba/Sentinel/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%99%E6%89%A9%E5%B1%95">dynamic rules</a></li>
+<li><a href="https://github.com/alibaba/Sentinel/wiki/%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Sentinel#%E8%A7%84%E5%88%99%E7%AE%A1%E7%90%86%E5%8F%8A%E6%8E%A8%E9%80%81">using in product environment-sentinel</a></li>
+</ul>
+<p>Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client,
+like the following 👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/53381986-a0b73f00-39ad-11e9-90cf-b49158ae4b6f.png" alt="">
+Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.</p>
+<h2 id="transform-the-interaction-between-systems">Transform the interaction between systems</h2>
+<p>So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following
+(i used the etcd as the dynamic datasource)👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%20(90).png" alt=""></p>
+<p>Besides the common steps between offical suggested and my practice, we should takes one more step:
+add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the
+new business data and pushs to etcd server positively. Sentinel-etcd-datasource will automatically does the rest things.</p>
+<h2 id="the-bug-of-sentinel">The bug of sentinel</h2>
+<p>I found a bug when i used sentinel-etcd-datasource, and i committed a pull request 👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/aaa.png" alt=""></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.bb2c6bc3ed452ca4759660e4020811f248bc2320081559e8a32d8b0092773852941133639d35e8370d03d3ddaa750b1edd6b343c5bd22a55d5bdeae8f648f49b.js" integrity="sha512-uyxrw&#43;1FLKR1lmDkAggR8ki8IyAIFVnooy2LAJJ3OFKUETNjnTXoNw0D092qdQse3Ws0PFvSKlXVvero9kj0mw=="></script>
+
+
+
+    </body>
+</html>
