@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 13 Dec 2022 21:47:11 +0800</lastBuildDate><atom:link href="https://yan1025.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Dec 2022 18:58:11 +0800</lastBuildDate><atom:link href="https://yan1025.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What the different of abstract between Go and Java?</title>
+      <link>https://yan1025.github.io/posts/javaandgoabstract/</link>
+      <pubDate>Fri, 23 Dec 2022 18:58:11 +0800</pubDate>
+      
+      <guid>https://yan1025.github.io/posts/javaandgoabstract/</guid>
+      <description>Conclusion The conclusion given at the first: Java take &amp;ldquo;extends&amp;rdquo; while Go takes combination to implements abstrct.
+Interface Implement Java will explicitly declares implement relation by useing &amp;ldquo;implement&amp;rdquo; syntax. As a comparison, Go makes a rule that the &amp;ldquo;struct&amp;rdquo; will automatically implements a interface as long as it implements all of the interface&amp;rsquo;s methods. For instance, if we want &amp;ldquo;Student&amp;rdquo;(class) implements &amp;ldquo;Eatable&amp;rdquo;(interface), we could do as following👇:
+public interface Eatable { void before(); void eating(); void after(); } public class Student implements Eatable { @java.</description>
+    </item>
+    
     <item>
       <title>一件尴尬的小事儿</title>
       <link>https://yan1025.github.io/life/%E8%8B%B9%E6%9E%9C%E9%BC%A0%E6%A0%87%E7%9A%84%E5%B0%B4%E5%B0%AC/</link>
