@@ -8,6 +8,8 @@ draft: false
 
 ![](https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/IMG_0489.jpg)
 
+![](https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/IMG_0490.JPG)
+
 > 绘画工具：iPad Pro + Apple Pencil
 >
 > 软件：GoodNotes
