@@ -23,5 +23,6 @@ add a listener to the business data(a collection named 'Sla' that stored in Mong
 new business data and pushs to etcd server positively. Sentinel-etcd-datasource will automatically does the rest things.
 
 ## The bug of sentinel
-I found a bug when i used sentinel-etcd-datasource, and i committed a pull request 👇
-![](https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/aaa.png)
+I found a bug when i used sentinel-etcd-datasource, and i committed a pull request which is already merged into the 
+master branch and will be released in about v2.0.0👇
+![](https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/20221224.png)

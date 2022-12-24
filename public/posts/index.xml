@@ -131,8 +131,9 @@ Howeve my demand is making the flowRules change according to the business data r
 add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the
 new business data and pushs to etcd server positively. Sentinel-etcd-datasource will automatically does the rest things.</p>
 <h2 id="the-bug-of-sentinel">The bug of sentinel</h2>
-<p>I found a bug when i used sentinel-etcd-datasource, and i committed a pull request 👇
-<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/aaa.png" alt=""></p>
+<p>I found a bug when i used sentinel-etcd-datasource, and i committed a pull request which is already merged into the
+master branch and will be released in about v2.0.0👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/20221224.png" alt=""></p>
 ]]></content>
         </item>
         

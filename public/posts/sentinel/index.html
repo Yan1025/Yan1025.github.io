@@ -45,7 +45,7 @@ Transform the interaction between systems So we need transform the interaction b
 dynamic rules using in product environment-sentinel Sentinel official suggested that the dynamic rules pushed by sentinel-datasource rather than sentinel-client, like the following 👇 Howeve my demand is making the flowRules change according to the business data rather than my operation on the sentinel-dashboard.
 Transform the interaction between systems So we need transform the interaction between sentinel-client, etcd server and sentinet-dashboard, like the following (i used the etcd as the dynamic datasource)👇 Besides the common steps between offical suggested and my practice, we should takes one more step: add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the new business data and pushs to etcd server positively."><meta itemprop="datePublished" content="2022-12-12T21:58:11+08:00" />
 <meta itemprop="dateModified" content="2022-12-12T21:58:11+08:00" />
-<meta itemprop="wordCount" content="157"><meta itemprop="image" content="https://yan1025.github.io/"/>
+<meta itemprop="wordCount" content="171"><meta itemprop="image" content="https://yan1025.github.io/"/>
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://yan1025.github.io/"/>
@@ -171,8 +171,9 @@ Howeve my demand is making the flowRules change according to the business data r
 add a listener to the business data(a collection named &lsquo;Sla&rsquo; that stored in MongoDB) what builds new flowRules from the
 new business data and pushs to etcd server positively. Sentinel-etcd-datasource will automatically does the rest things.</p>
 <h2 id="the-bug-of-sentinel">The bug of sentinel</h2>
-<p>I found a bug when i used sentinel-etcd-datasource, and i committed a pull request 👇
-<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/aaa.png" alt=""></p>
+<p>I found a bug when i used sentinel-etcd-datasource, and i committed a pull request which is already merged into the
+master branch and will be released in about v2.0.0👇
+<img src="https://raw.githubusercontent.com/Yan1025/picbed/master/picbed/20221224.png" alt=""></p>
 
       </div>
     </article>
@@ -191,7 +192,7 @@ new business data and pushs to etcd server positively. Sentinel-etcd-datasource 
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        157 Words
+        171 Words
       </p>
 
       <p>
