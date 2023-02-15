@@ -6,19 +6,53 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 23 Dec 2022 18:58:11 +0800</lastBuildDate>
+        <lastBuildDate>Wed, 15 Feb 2023 18:58:11 +0800</lastBuildDate>
         <atom:link href="https://yan1025.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>What the different of abstract between Go and Java?</title>
+            <title>Orchestration</title>
+            <link>https://yan1025.github.io/posts/orchestration-/</link>
+            <pubDate>Wed, 15 Feb 2023 18:58:11 +0800</pubDate>
+            
+            <guid>https://yan1025.github.io/posts/orchestration-/</guid>
+            <description>Category The topic of orchestration contains:
+orchestration for api orchestration for process orchestration for data orchestration for workflow orchestration for container Orchestration for api Orchestration for process Orchestration for data Orchestration for workflow Orchestration for container In the end, a xmind should be posted below:
+//TODO xmind</description>
+            <content type="html"><![CDATA[<h1 id="category">Category</h1>
+<p>The topic of orchestration contains:</p>
+<ul>
+<li>orchestration for api</li>
+<li>orchestration for process</li>
+<li>orchestration for data</li>
+<li>orchestration for workflow</li>
+<li>orchestration for container</li>
+</ul>
+<h1 id="orchestration-for-api">Orchestration for api</h1>
+<h1 id="orchestration-for-process">Orchestration for process</h1>
+<h1 id="orchestration-for-data">Orchestration for data</h1>
+<h1 id="orchestration-for-workflow">Orchestration for workflow</h1>
+<h1 id="orchestration-for-container">Orchestration for container</h1>
+<p>In the end, a xmind should be posted below:</p>
+<p>//TODO xmind</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>What the different between Go and Java?</title>
             <link>https://yan1025.github.io/posts/javaandgoabstract/</link>
             <pubDate>Fri, 23 Dec 2022 18:58:11 +0800</pubDate>
             
             <guid>https://yan1025.github.io/posts/javaandgoabstract/</guid>
-            <description>Conclusion The conclusion given at the first: Java take &amp;ldquo;extends&amp;rdquo; while Go takes combination to implements abstrct.
-Interface Implement Java will explicitly declares implement relation by useing &amp;ldquo;implement&amp;rdquo; syntax. As a comparison, Go makes a rule that the &amp;ldquo;struct&amp;rdquo; will automatically implements a interface as long as it implements all of the interface&amp;rsquo;s methods. For instance, if we want &amp;ldquo;Student&amp;rdquo;(class) implements &amp;ldquo;Eatable&amp;rdquo;(interface), we could do as following👇:
-public interface Eatable { void before(); void eating(); void after(); } public class Student implements Eatable { @java.</description>
-            <content type="html"><![CDATA[<h2 id="conclusion">Conclusion</h2>
+            <description>Java version : OpenJDK Runtime Environment Temurin-11.0.17+8 (build 11.0.17+8)
+Go version : go1.19.4
+Abstraction Conclusion The conclusion given at the first: Java take &amp;ldquo;extends&amp;rdquo; while Go takes combination to implements abstrct.
+Interface Implement Java will explicitly declares implement relation by useing &amp;ldquo;implement&amp;rdquo; syntax. As a comparison, Go makes a rule that the &amp;ldquo;struct&amp;rdquo; will automatically implements a interface as long as it implements all of the interface&amp;rsquo;s methods. For instance, if we want &amp;ldquo;Student&amp;rdquo;(class) implements &amp;ldquo;Eatable&amp;rdquo;(interface), we could do as following👇:</description>
+            <content type="html"><![CDATA[<blockquote>
+<p>Java version : OpenJDK Runtime Environment Temurin-11.0.17+8 (build 11.0.17+8)</p>
+<p>Go version : go1.19.4</p>
+</blockquote>
+<h1 id="abstraction">Abstraction</h1>
+<h2 id="conclusion">Conclusion</h2>
 <p>The conclusion given at the first: Java take &ldquo;extends&rdquo; while Go takes combination to implements abstrct.</p>
 <h2 id="interface-implement">Interface Implement</h2>
 <p>Java will explicitly declares implement relation by useing &ldquo;implement&rdquo; syntax.
@@ -96,11 +130,27 @@ while there are two solutions called extend and composite.</p>
 </span></span></code></pre></div><p>As unsupport multiple extend, if you want to reuse more than one class, you can only use multi-layer extend or make the
 super classes being fields of subclass while the former <strong>decrease the readability</strong> and the latter <strong>can&rsquo;t indicates the correct
 relationship of super classes and subclass</strong>.</p>
-<h2 id="the-shortcoming-of-go">The shortcoming of Go</h2>
+<h2 id="the-shortcoming-of-gos-abstraction">The shortcoming of Go&rsquo;s abstraction</h2>
 <p>It must be admitted that it&rsquo;s very simplified of implementing interfaces in Go. But at the opposite, it will be more and
 more difficult to figure out how much and which interfaces does a type implements when the project becoming huger and huger.</p>
 <p>Maybe that&rsquo;s one of the reasons why employers, even like tiktok and bilibili who takes Go as their main development language,
 takes Java rather than Go as the main language to develop big project with very complex business logic such as online trading system.</p>
+<h1 id="function">Function</h1>
+<p>As Java is a strongfied OOD language, The function in Java needs defining a class(the definition of object) first of all
+as it is decoupled with object(the instance of struct) in Go.</p>
+<p>Defining methods for object is also supported in Go, just like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lion</span> = <span style="color:#a6e22e">Lion</span>{}
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">lion</span>.<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#34;meat&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Lion</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">lion</span> <span style="color:#a6e22e">Lion</span>) <span style="color:#a6e22e">eat</span>(<span style="color:#a6e22e">food</span> <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//......
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>Go is obviously more flexible than Java in many ways.</p>
 ]]></content>
         </item>
         

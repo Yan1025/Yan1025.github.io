@@ -1,9 +1,14 @@
 ---
-title: "What the different of abstract between Go and Java?"
+title: "What the different between Go and Java?"
 date: 2022-12-23T18:58:11+08:00
 draft: false
 ---
 
+> Java version : OpenJDK Runtime Environment Temurin-11.0.17+8 (build 11.0.17+8)
+> 
+> Go version : go1.19.4
+
+# Abstraction
 ## Conclusion
 The conclusion given at the first: Java take "extends" while Go takes combination to implements abstrct.
 
@@ -95,9 +100,29 @@ type Man struct {
 As unsupport multiple extend, if you want to reuse more than one class, you can only use multi-layer extend or make the 
 super classes being fields of subclass while the former **decrease the readability** and the latter **can't indicates the correct
 relationship of super classes and subclass**.
-## The shortcoming of Go
+## The shortcoming of Go's abstraction
 It must be admitted that it's very simplified of implementing interfaces in Go. But at the opposite, it will be more and
 more difficult to figure out how much and which interfaces does a type implements when the project becoming huger and huger.
 
 Maybe that's one of the reasons why employers, even like tiktok and bilibili who takes Go as their main development language,
 takes Java rather than Go as the main language to develop big project with very complex business logic such as online trading system.
+
+# Function
+As Java is a strongfied OOD language, The function in Java needs defining a class(the definition of object) first of all 
+as it is decoupled with object(the instance of struct) in Go.
+
+Defining methods for object is also supported in Go, just like:
+```go
+func main() {
+    var lion = Lion{}
+    lion.eat("meat")
+}
+
+type Lion struct {
+}
+
+func (lion Lion) eat(food string) {
+    //......
+}
+```
+Go is obviously more flexible than Java in many ways.

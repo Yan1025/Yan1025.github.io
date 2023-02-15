@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yan1025.github.io/life/photos/</loc>
-    <lastmod>2022-12-24T11:47:11+08:00</lastmod>
-  </url><url>
     <loc>https://yan1025.github.io/</loc>
+    <lastmod>2023-02-15T18:58:11+08:00</lastmod>
+  </url><url>
+    <loc>https://yan1025.github.io/posts/orchestration-/</loc>
+    <lastmod>2023-02-15T18:58:11+08:00</lastmod>
+  </url><url>
+    <loc>https://yan1025.github.io/posts/</loc>
+    <lastmod>2023-02-15T18:58:11+08:00</lastmod>
+  </url><url>
+    <loc>https://yan1025.github.io/life/photos/</loc>
     <lastmod>2022-12-24T11:47:11+08:00</lastmod>
   </url><url>
     <loc>https://yan1025.github.io/life/</loc>
     <lastmod>2022-12-24T11:47:11+08:00</lastmod>
-  </url><url>
-    <loc>https://yan1025.github.io/posts/</loc>
-    <lastmod>2022-12-23T18:58:11+08:00</lastmod>
   </url><url>
     <loc>https://yan1025.github.io/posts/javaandgoabstract/</loc>
     <lastmod>2022-12-23T18:58:11+08:00</lastmod>
